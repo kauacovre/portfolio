@@ -1,134 +1,183 @@
-/* style.css */
-
-/* Reset básico */
+/* =====================================================
+   RESET BÁSICO E CONFIGURAÇÕES GERAIS
+   ===================================================== */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-  
-  body {
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
-  }
-  
-  header {
-    background-color: #0d1117;
-    color: #fff;
-    padding: 20px;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-  }
-  
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  
-  nav h1 {
-    font-size: 24px;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f4f4f4; /* fundo claro padrão */
+  color: #333; /* texto padrão */
+  line-height: 1.6;
+}
+
+/* =====================================================
+   CABEÇALHO E NAVEGAÇÃO
+   ===================================================== */
+header {
+  background-color: #0d1117;
+  color: #fff;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav h1 {
+  font-size: 24px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #58a6ff;
+}
+
+/* =====================================================
+   SEÇÃO HERO (INTRODUÇÃO)
+   ===================================================== */
+.hero {
+  background: linear-gradient(to right, #0d1117, #1f2937);
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2em;
+}
+
+/* =====================================================
+   SEÇÕES GERAIS
+   ===================================================== */
+section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* =====================================================
+   TECNOLOGIAS E CARDS
+   ===================================================== */
+#tecnologias .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+  color: #0d1117;
+  margin-bottom: 10px;
+}
+
+/* =====================================================
+   RODAPÉ
+   ===================================================== */
+footer {
+  background-color: #0d1117;
+  color: #ccc;
+  text-align: center;
+  padding: 20px;
+}
+
+footer a {
+  color: #58a6ff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* =====================================================
+   RESPONSIVIDADE
+   ===================================================== */
+@media (max-width: 768px) {
   nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
   }
-  
-  nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
-  }
-  
-  nav ul li a:hover {
-    color: #58a6ff;
-  }
-  
-  .hero {
-    background: linear-gradient(to right, #0d1117, #1f2937);
-    color: white;
-    padding: 100px 20px;
-    text-align: center;
-  }
-  
+
   .hero h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
+    font-size: 2em;
   }
-  
-  .hero p {
-    font-size: 1.2em;
-  }
-  
+
   section {
-    padding: 60px 20px;
-    max-width: 1000px;
-    margin: 0 auto;
+    padding: 40px 15px;
   }
-  
-  #tecnologias .cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-    margin-top: 20px;
-  }
-  
-  .card {
-    background-color: white;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-  
-  .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-  }
-  
-  .card h3 {
-    color: #0d1117;
-    margin-bottom: 10px;
-  }
-  
-  footer {
-    background-color: #0d1117;
-    color: #ccc;
-    text-align: center;
-    padding: 20px;
-  }
-  
-  footer a {
-    color: #58a6ff;
-    text-decoration: none;
-  }
-  
-  footer a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Responsivo */
-  @media (max-width: 768px) {
-    nav ul {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 10px;
-    }
-  
-    .hero h2 {
-      font-size: 2em;
-    }
-  
-    section {
-      padding: 40px 15px;
-    }
-  }
-  
+}
+
+/* =====================================================
+   TEMA ESCURO (DARK MODE)
+   ===================================================== */
+body.dark-mode {
+  background-color: #0d1117; /* fundo geral escuro */
+  color: white; /* texto claro */
+}
+
+body.dark-mode a {
+  color: #58a6ff; /* links no dark mode */
+}
+
+/* Ajustes específicos para a section de tecnologias */
+body.dark-mode #tecnologias {
+  background-color: #161b22; /* fundo escuro */
+  color: white;
+}
+
+/* Ajuste visual dos cards no dark mode */
+body.dark-mode #tecnologias .card {
+  background-color: #21262d; /* fundo do card */
+  border: 1px solid #30363d;
+  color: white;
+}
+
+body.dark-mode #tecnologias .card h3 {
+  color: #58a6ff; /* título com destaque */
+}
+
+body.dark-mode #tecnologias .card p {
+  color: #c9d1d9; /* texto mais claro */
+}
