@@ -1,2 +1,2 @@
-# site-github
-Projeto de site criado durante o curso de Git e GitHub
+# project_site
+Site criado para mostrar meu portfólio.
